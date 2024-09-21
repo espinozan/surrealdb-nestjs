@@ -7,7 +7,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
 
 
-
+/*
 @Module({
   imports: [
     SurrealdbModule,
@@ -15,6 +15,15 @@ import { join } from 'path';
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
     }),
   ],
+  controllers: [SurrealdbController],
+  providers: [SurrealdbResolver],
+})
+export class AppModule {}
+
+*/
+
+@Module({
+  imports: [SurrealdbModule],
   controllers: [SurrealdbController],
   providers: [SurrealdbResolver],
 })

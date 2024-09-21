@@ -1,6 +1,6 @@
 import { Client, ClientGrpc } from '@nestjs/microservices';
 import { Injectable, OnModuleInit } from '@nestjs/common';
-import { surrealDbClientOptions } from './grpc.options';
+import { surrealDbClientOptions } from '../grpc.options';  // Importa las opciones correctamente
 
 @Injectable()
 export class SurrealdbGrpcService implements OnModuleInit {
